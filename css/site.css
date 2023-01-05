@@ -97,7 +97,7 @@ main > .container {
 
 .background {
   background-color: var(--fizzBlue-color);
-  height: 100%;
+  height: max-content;
 }
 
 .greenText {
