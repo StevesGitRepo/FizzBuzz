@@ -1,41 +1,52 @@
 //get values from the page for start and ending inputs
 const getValues = () => {
-  let startValue = document.getElementById('startValue').value;
-  let endValue = document.getElementById('endValue').value;
-  let numbers = generateNumbers(startValue, endValue);
+  let fizzValue = document.getElementById('fizzValue').value;
+  let buzzValue = document.getElementById('buzzValue').value;
+  let numbers = fizzBuzz(fizzValue, buzzValue);
 
   //input validation, parse into integers
-  startValue = parseInt(startValue);
-  endValue = parseInt(endValue);
+  fizzValue = parseInt(fizzValue);
+  buzzValue = parseInt(buzzValue);
 
   //integer check:
   //alert('The sum is:' (startValue + endValue));
 
-  if (Number.isInteger(startValue) && Number.isInteger(endValue)) {
-    //generateNumbers
+  if (Number.isInteger(fizzValue) && Number.isInteger(buzzValue)) {
+    //generateNumbers, or fizzBuzz
+    let fbArray = FizzBuzz(fizzValue, buzzValue);
+    displayData(fbArray);
   } else {
     alert('You must enter integers');
   }
 
   //range limits check and alert message
-  if (startValue < 1 || endValue > 100) {
+  if (fizzValue < 1 || buzzValue > 100) {
     alert('Type a number between 1 and 100');
   }
-
-  displayNumbers(numbers);
 };
 
-const generateNumbers = (sValue, eValue) => {
-  let numbers = [];
+const fizzBuzz = (fizzValue, buzzValue) => {
+  let returnArray = [];
 
-  for (let index = sValue; index < eValue; index++) {
-    numbers.push[index];
+  //check to see if divisible by both (3 and 5)
+  //check to see if divisible by fizz value (3)
+  //check to see if divisible by buzz value (5)
+
+  for (let i = 1; i < 100; i++) {
+    if (i % fizzValue === 0 && i % buzzValue === 0) {
+      returnArray.push('FizzBuzz');
+    } else if (i % fizzValue === 0) {
+      returnArray.push('Fizz');
+    } else if (i % buzzValue === 0) {
+      returnArray.push('Buzz');
+    } else {
+      returnArray.push(i);
+    }
   }
-
-  return numbers;
 };
 
-const displayNumbers = (numbers) => {
+//loop over the array and create a tablerow for each item.
+const displayData = (numbers) => {
   let templateRows = '';
 
   for (let i = 0; i < numbers.length; i++) {
@@ -58,6 +69,7 @@ const displayNumbers = (numbers) => {
       }
     }
 
+    //add
     templateRows += `<tr><td class="${className}">${number}</td>
     <td class="${className}">${number}</td>
     <td class="${className}">${number}</td>
