@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en" class="h-100">
   <head>
-    <title>App Name: A Coding Project By Steve Szymanski</title>
+    <title>FIZZ BUZZ: A Coding Project By Steve Szymanski</title>
     <!-- Required meta tags -->
     <meta charset="utf-8" />
     <meta
@@ -40,12 +40,12 @@
 
     <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
       <div class="container-fluid">
-        <a class="navbar-brand" href="index.html"
+        <a class="navbar-brand brandLogo" href="index.html"
           ><img
             src="/img/LogoGradientCircled.png"
             width="30"
             class="me-3 mb-1 ms-1"
-          />FIZZ BUZZ</a
+          /><span class="greenText">FIZZ BUZZ</span></a
         >
         <button
           class="navbar-toggler"
@@ -94,18 +94,23 @@
 
     <!-- ==== Main Section ==== -->
 
-    <main class="flex-shrink-0">
+    <main class="flex-shrink-0 background">
       <div class="container col-xxl-8 px-4 py-5 py-lg-1">
         <div class="row g-5 mt-lg-1 py-5 row-cols-1 row-cols-lg-2">
           <div class="col order-last order-lg-first">
             <h1 class="display-5 fw-bold lh-1 mb-3">
-              APP NAME: A Coding Project
+              <span class="">FIZZ BUZZ:</span> A Coding Project
             </h1>
-            <h4 class="lead">
-              One step at a time, one loop at a time. A Javascript coding
-              exercise using loops. Write a program that displays the numbers 0
-              to 100. Display the even numbers in <strong>BOLD</strong>.
+            <h4 class=>
+              When it counts you Fizz Buzz. A Javascript coding exercise using
+              loops. 
+              <h4>
+                Write a program that prints the numbers 1 to 100. Multiples
+                of '3' replaces the number with 'Fizz' and multiples of '5'
+                display 'Buzz'.
+              </h4>
             </h4>
+            <h4>Finally, multiples of '3' AND '5' display 'FizzBuzz'!</h4>
             <ul class="fa-ul pt-2 checklist checklistText">
               <li>
                 <span class="fa-li"><i class="fas fa-check-square"></i></span
@@ -138,25 +143,27 @@
             </ul>
             <a
               type="button"
-              class="btn btn-outline-dark btn-lg px-4 me-md-2"
+              class="btn btn-dark btn-lg px-4 me-md-2"
               href="app.html"
             >
               <strong>Try It Out!</strong>
             </a>
             <h5 class="fw-bold mt-5">
               <div class="d-flex">
-                <div class="row">
-                  <div class="col">
-                    <i class="fab fa-js-square fa-2x jsIcon"></i>
-                  </div>
-                  <div class="col">
-                    <i class="fab fa-bootstrap fa-2x bsIcon"></i>
-                  </div>
-                  <div class="col">
-                    <i class="fab fa-html5 fa-2x html5Icon"></i>
-                  </div>
-                  <div class="col">
-                    <i class="fab fa-css3-alt fa-2x css3Icon"></i>
+                <div class="card pb-1 ps-2 pe-2 pt-2 border-1 border-dark">
+                  <div class="row">
+                    <div class="col">
+                      <i class="fab fa-js-square fa-2x jsIcon"></i>
+                    </div>
+                    <div class="col">
+                      <i class="fab fa-bootstrap fa-2x bsIcon"></i>
+                    </div>
+                    <div class="col">
+                      <i class="fab fa-html5 fa-2x html5Icon"></i>
+                    </div>
+                    <div class="col">
+                      <i class="fab fa-css3-alt fa-2x css3Icon"></i>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -164,10 +171,11 @@
           </div>
           <div class="col">
             <img
-              src="img/FizzBuzzColorLogoTagLine.png"
+              src="img/FizzBuzzLogoColorGreenbg.png"
               class="img-fluid center-block d-block mx-auto"
               alt="FizzBuzz Logo"
-              height="500"
+              height="400"
+              width="400"
             />
           </div>
         </div>

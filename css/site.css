@@ -6,6 +6,8 @@
   --silver-color: rgb(122, 143, 161);
   --logoBlue-color: rgb(125, 100, 250);
   --sinovaBlue-color: rgb(19, 205, 232);
+  --green-color: rgb(180, 255, 118);
+  --yellow-color: rgb(251, 255, 0);
 }
 
 body {
@@ -26,7 +28,7 @@ h3,
 h4,
 h5,
 h6 {
-  color: var(--primary-color);
+  color: var(--dark-color);
 }
 
 .sticky-footer {
@@ -44,7 +46,7 @@ footer .social > a {
 
 footer .social > a:hover {
   opacity: 1;
-  color: var(--logoBlue-color);
+  color: var(--yellow-color);
 }
 
 .footerContact {
@@ -68,11 +70,11 @@ footer .social > a:hover {
 }
 
 .checklist > li i {
-  color: var(--logoBlue-color);
+  color: var(--dark-color);
 }
 
 .checklistText {
-  color: var(--primary-color);
+  color: var(--dark-color);
 }
 
 code[class*='language-'],
@@ -85,4 +87,17 @@ pre[class*='language-'] {
 main > .container {
   padding: 60px 15px 0;
   margin-bottom: 5rem;
+}
+
+.brandLogo {
+  font-family: 'Anton', sans-serif;
+  font-family: 'Permanent Marker' cursive;
+}
+
+.background {
+  background-color: var(--green-color);
+}
+
+.greenText {
+  color: var(--green-color);
 }
