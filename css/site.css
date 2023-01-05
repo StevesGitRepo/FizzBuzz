@@ -8,6 +8,7 @@
   --sinovaBlue-color: rgb(19, 205, 232);
   --green-color: rgb(180, 255, 118);
   --yellow-color: rgb(251, 255, 0);
+  --fizzBlue-color: rgb(179, 253, 255);
 }
 
 body {
@@ -95,9 +96,10 @@ main > .container {
 }
 
 .background {
-  background-color: var(--green-color);
+  background-color: var(--fizzBlue-color);
+  height: 100%;
 }
 
 .greenText {
-  color: var(--green-color);
+  color: var(--yellow-color);
 }
