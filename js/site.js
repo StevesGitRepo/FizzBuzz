@@ -2,7 +2,6 @@
 const getValues = () => {
   let fizzValue = document.getElementById('fizzValue').value;
   let buzzValue = document.getElementById('buzzValue').value;
-  let numbers = fizzBuzz(fizzValue, buzzValue);
 
   //input validation, parse into integers
   fizzValue = parseInt(fizzValue);
@@ -13,16 +12,17 @@ const getValues = () => {
 
   if (Number.isInteger(fizzValue) && Number.isInteger(buzzValue)) {
     //generateNumbers, or fizzBuzz
-    let fbArray = FizzBuzz(fizzValue, buzzValue);
+    let fbArray = fizzBuzz(fizzValue, buzzValue);
+
     displayData(fbArray);
   } else {
     alert('You must enter integers');
   }
 
   //range limits check and alert message
-  if (fizzValue < 1 || buzzValue > 100) {
-    alert('Type a number between 1 and 100');
-  }
+  // if (fizzValue < 1 || buzzValue > 100) {
+  //   alert('Type a number between 1 and 100');
+  // }
 };
 
 const fizzBuzz = (fizzValue, buzzValue) => {
@@ -32,17 +32,18 @@ const fizzBuzz = (fizzValue, buzzValue) => {
   //check to see if divisible by fizz value (3)
   //check to see if divisible by buzz value (5)
 
-  for (let i = 1; i < 100; i++) {
-    if (i % fizzValue === 0 && i % buzzValue === 0) {
+  for (let i = 1; i <= 100; i++) {
+    if (i % fizzValue == 0 && i % buzzValue == 0) {
       returnArray.push('FizzBuzz');
-    } else if (i % fizzValue === 0) {
+    } else if (i % fizzValue == 0) {
       returnArray.push('Fizz');
-    } else if (i % buzzValue === 0) {
+    } else if (i % buzzValue == 0) {
       returnArray.push('Buzz');
     } else {
       returnArray.push(i);
     }
   }
+  return returnArray;
 };
 
 //loop over the array and create a tablerow for each item.
@@ -60,11 +61,11 @@ const displayData = () => {
 
     //grab the td's to put into the array
     let rowCols = tableRow.querySelectorAll('td');
-    rowCols[0].textContent = fbData[i];
-    rowCols[1].textContent = fbData[i + 1];
-    rowCols[2].textContent = fbData[i + 2];
-    rowCols[3].textContent = fbData[i + 3];
-    rowCols[4].textContent = fbData[i + 4];
+    rowCols[0].textContent = fbArray[index];
+    rowCols[1].textContent = fbArray[index + 1];
+    rowCols[2].textContent = fbArray[index + 2];
+    rowCols[3].textContent = fbArray[index + 3];
+    rowCols[4].textContent = fbArray[index + 4];
 
     tableBody.appendChild(tableRow);
   }
