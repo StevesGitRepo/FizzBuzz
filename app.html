@@ -88,84 +88,85 @@
       </div>
     </nav>
     <!-- ==== Main Section ==== -->
-
-    <main class="flex-shrink-0 background">
-      <div class="container mt-5">
-        <div class="row">
-          <div class="col-12 col-lg-4 border-end border-2 border-dark">
-            <h1><span class="brandLogo">FIZZ BUZZ:</span> A Coding Project</h1>
-            <h4 class="lead">
-              One step, one loop at a time. A Javascript coding exercise using
-              loops to display the numbers 1 to 100. Display the even numbers in
-              <strong class="boldFont">bold</strong>.
-            </h4>
-            <h2 class="mt-5 border-bottom border-2 border-dark">
-              Instructions
-            </h2>
-            <p>
-              Enter a starting and ending value. Press the button and the values
-              will appear. Include at least two numerals in the starting value
-              to view results. <span class="example">Example: 04</span>
-            </p>
-            <p>
-              BONUS! Can you find the minimum and maximum numbers in the range?
-              (Hint- there are hints!)
-            </p>
-          </div>
-          <div class="col-12 col-lg-8">
-            <div>
-              <h5>Enter Values</h5>
-              <form class="row gy-2 gx-3">
-                <div class="col">
-                  <input
-                    id="startValue"
-                    type="number"
-                    class="form-control"
-                    placeholder="Start Value"
-                    value="01"
-                    aria-label="Start Value"
-                  />
-                </div>
-                <div class="col">
-                  <input
-                    id="endValue"
-                    type="number"
-                    class="form-control"
-                    placeholder="End Value"
-                    value="100"
-                    aria-label="End Value"
-                  />
-                </div>
-                <div class="col-12 d-flex justify-content-end">
-                  <!-- Button -->
-                  <button
-                    id="btnSubmit"
-                    type="button"
-                    class="btn btn-dark btn-lg"
-                  >
-                    <strong>FIZZ BUZZ!</strong>
-                  </button>
-                </div>
-              </form>
+      <main class="flex-shrink-0 background">
+        <div class="container mt-5">
+          <div class="row">
+            <div class="col-12 col-lg-4 border-end border-2 border-dark">
+              <h1>
+                <span class="brandLogo">FIZZ BUZZ:</span> A Coding Project
+              </h1>
+              <h4 class="lead">
+                One step, one loop at a time. A Javascript coding exercise using
+                loops to display the numbers 1 to 100. Display the even numbers
+                in
+                <strong class="boldFont">bold</strong>.
+              </h4>
               <h2 class="mt-5 border-bottom border-2 border-dark">
-                <img src="/img/FizzBuzzLogoBlueColorNoLogo.png" width="40" />
-
-                Results
+                Instructions
               </h2>
-              <div class="table-responsive">
-                <table class="table table-striped table-sm">
-                  <tbody id="results"></tbody>
-                </table>
+              <p>
+                Enter a starting and ending value. Press the button and the
+                values will appear. Include at least two numerals in the
+                starting value to view results.
+                <span class="example">Example: 04</span>
+              </p>
+              <p>
+                BONUS! Can you find the minimum and maximum numbers in the
+                range? (Hint- there are hints!)
+              </p>
+            </div>
+            <div class="col-12 col-lg-8">
+              <div>
+                <h5>Enter Values</h5>
+                <form class="row gy-2 gx-3">
+                  <div class="col">
+                    <input
+                      id="startValue"
+                      type="number"
+                      class="form-control"
+                      placeholder="Start Value"
+                      value="01"
+                      aria-label="Start Value"
+                    />
+                  </div>
+                  <div class="col">
+                    <input
+                      id="endValue"
+                      type="number"
+                      class="form-control"
+                      placeholder="End Value"
+                      value="100"
+                      aria-label="End Value"
+                    />
+                  </div>
+                  <div class="col-12 d-flex justify-content-end">
+                    <!-- Button -->
+                    <button
+                      id="btnSubmit"
+                      type="button"
+                      class="btn btn-dark btn-lg"
+                    >
+                      <strong>FIZZ BUZZ!</strong>
+                    </button>
+                  </div>
+                </form>
+                <h2 class="mt-5 border-bottom border-2 border-dark">
+                  <img src="/img/FizzBuzzLogoBlueColorNoLogo.png" width="40" />
+
+                  Results
+                </h2>
+                <div class="table-responsive">
+                  <table class="table table-striped table-sm">
+                    <tbody id="results"></tbody>
+                  </table>
+                </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
-    </main>
-    <!-- ==== Footer Section ==== -->
-
-    <!-- ==== Footer Section ==== -->
-
+      </main>
+      
+      <!-- ==== Footer Section ==== -->
     <footer class="footer mt-auto py-3 sticky-footer">
       <div class="container-fluid">
         <div class="row row-cols-1 row-cols-lg-3">
@@ -212,6 +213,16 @@
         </div>
       </div>
     </footer>
+
+    <template id="fbTemplate">
+      <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+    </template>
     <!-- Bootstrap JS -->
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"

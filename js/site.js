@@ -46,36 +46,26 @@ const fizzBuzz = (fizzValue, buzzValue) => {
 };
 
 //loop over the array and create a tablerow for each item.
-const displayData = (numbers) => {
-  let templateRows = '';
+const displayData = () => {
+  let tableBody = document.getElementById('results');
 
-  for (let i = 0; i < numbers.length; i++) {
-    let className = number;
-    let number = numbers[i];
+  //get the template row
+  let templateRow = document.getElementById('fbTemplate');
 
-    if (number % 1 === 0) {
-      let number = numbers[i];
-    } else {
-      if (number % 3 === 0) {
-        className = 'Fizz';
-      }
+  //clear the table
+  tableBody.innerHTML = '';
 
-      if (number % 5 === 0) {
-        className = 'Buzz';
-      }
+  for (let index = 0; index < fbArray.length; index += 5) {
+    let tableRow = document.importNode(templateRow.content, true);
 
-      if (number % 15 === 0) {
-        className = 'FizzBuzz';
-      }
-    }
+    //grab the td's to put into the array
+    let rowCols = tableRow.querySelectorAll('td');
+    rowCols[0].textContent = fbData[i];
+    rowCols[1].textContent = fbData[i + 1];
+    rowCols[2].textContent = fbData[i + 2];
+    rowCols[3].textContent = fbData[i + 3];
+    rowCols[4].textContent = fbData[i + 4];
 
-    //add
-    templateRows += `<tr><td class="${className}">${number}</td>
-    <td class="${className}">${number}</td>
-    <td class="${className}">${number}</td>
-    <td class="${className}">${number}</td>
-    <td class="${className}">${number}</td></tr>`;
+    tableBody.appendChild(tableRow);
   }
-
-  document.getElementById('results').innerHTML = templateRows;
 };
