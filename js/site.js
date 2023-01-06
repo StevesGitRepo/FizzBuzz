@@ -47,7 +47,7 @@ const fizzBuzz = (fizzValue, buzzValue) => {
 };
 
 //loop over the array and create a tablerow for each item.
-const displayData = () => {
+const displayData = (fbArray) => {
   let tableBody = document.getElementById('results');
 
   //get the template row
@@ -61,10 +61,22 @@ const displayData = () => {
 
     //grab the td's to put into the array
     let rowCols = tableRow.querySelectorAll('td');
+
+    //add css styling with classList.add
+    rowCols[0].classList.add(fbArray[index]);
+    //column 1 on the table, etc...
     rowCols[0].textContent = fbArray[index];
+
+    rowCols[1].classList.add(fbArray[index + 1]);
     rowCols[1].textContent = fbArray[index + 1];
+
+    rowCols[2].classList.add(fbArray[index + 2]);
     rowCols[2].textContent = fbArray[index + 2];
+
+    rowCols[3].classList.add(fbArray[index + 3]);
     rowCols[3].textContent = fbArray[index + 3];
+
+    rowCols[4].classList.add(fbArray[index + 4]);
     rowCols[4].textContent = fbArray[index + 4];
 
     tableBody.appendChild(tableRow);

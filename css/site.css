@@ -128,3 +128,17 @@ main > .container {
   align-items: center;
 }
 
+.Fizz {
+  color: rgb(105, 2, 123);
+  font-weight: 500;
+}
+
+.Buzz {
+  color: rgb(37, 20, 191);
+  font-weight: 500;
+}
+
+.FizzBuzz {
+  color: rgb(255, 0, 85);
+  font-weight: bolder;
+}
