@@ -7,8 +7,9 @@
   --logoBlue-color: rgb(125, 100, 250);
   --sinovaBlue-color: rgb(19, 205, 232);
   --green-color: rgb(180, 255, 118);
-  --yellow-color: rgb(251, 255, 0);
+  --yellow-color: rgb(249, 251, 127);
   --fizzBlue-color: rgb(179, 253, 255);
+  --sun-color: rgb(255, 251, 179);
 }
 
 body {
@@ -100,6 +101,10 @@ main > .container {
   height: max-content;
 }
 
-.greenText {
+.yellowText {
+  color: var(--yellow-color);
+}
+
+.btn {
   color: var(--yellow-color);
 }
