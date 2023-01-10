@@ -8,8 +8,6 @@ const getValues = () => {
   buzzValue = parseInt(buzzValue);
 
   //integer check:
-  //alert('The sum is:' (startValue + endValue));
-
   if (Number.isInteger(fizzValue) && Number.isInteger(buzzValue)) {
     //generateNumbers, or fizzBuzz
     let fbArray = fizzBuzz(fizzValue, buzzValue);
@@ -18,33 +16,19 @@ const getValues = () => {
   } else {
     alert('You must enter integers');
   }
-
-  //range limits check and alert message
-  // if (fizzValue < 1 || buzzValue > 100) {
-  //   alert('Type a number between 1 and 100');
-  // }
 };
 
 const fizzBuzz = (fizzValue, buzzValue) => {
   let returnArray = [];
-
-  //check to see if divisible by both (3 and 5)
-  //check to see if divisible by fizz value (3)
-  //check to see if divisible by buzz value (5)
-
   for (let i = 1; i <= 100; i++) {
-    if (i % fizzValue == 0 && i % buzzValue == 0) {
-      returnArray.push('FizzBuzz');
-    } else if (i % fizzValue == 0) {
-      returnArray.push('Fizz');
-    } else if (i % buzzValue == 0) {
-      returnArray.push('Buzz');
-    } else {
-      returnArray.push(i);
-    }
+    let value =
+      (i % fizzValue === 0 ? 'Fizz' : '') +
+        (i % buzzValue === 0 ? 'Buzz' : '') || i;
+    returnArray.push(value);
   }
   return returnArray;
 };
+//empty string '' evaluates to false
 
 //loop over the array and create a tablerow for each item.
 const displayData = (fbArray) => {
