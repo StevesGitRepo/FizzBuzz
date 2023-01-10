@@ -3,3 +3,5 @@
 
 When it counts you Fizz Buzz. A Javascript coding exercise using loops.
 Write a program that prints the numbers 1 to 100. Multiples of '3' replaces the number with 'Fizz' and multiples of '5' display 'Buzz'.
+
+  -Ternary Operation
